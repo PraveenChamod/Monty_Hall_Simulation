@@ -18,11 +18,6 @@ namespace Monty_Hall_Simulation_API.Controllers
         [HttpPost("Start")]
         public IActionResult StartSimulations([FromQuery] int simulationCount, [FromQuery] bool switchStatus)
         {
-            if (simulationCount <= 0)
-            {
-                return BadRequest("Simulation count must be greater than zero.");
-            }
-
             try
             {
                 Result result = _simulationService.StartSimulations(simulationCount, switchStatus);
