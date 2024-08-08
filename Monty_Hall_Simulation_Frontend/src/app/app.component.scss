@@ -1,0 +1,20 @@
+.simulator-app-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-container {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.topic-text {
+  color: white;
+  font-size: 45px;
+  text-align: center;
+}
