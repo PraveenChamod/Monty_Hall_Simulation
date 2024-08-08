@@ -39,11 +39,6 @@ namespace Monty_Hall_Simulation_API.Services
             return door;
         }
 
-        public int IndexOfDoor(Door door)
-        {
-            return _doors.IndexOf(door);
-        }
-
         public Door SpeakerOpensDoor()
         {
             var door = _doors.First(x => x.Prize == AppConstants.GOAT && x.DoorState != DoorState.Chosen);

@@ -34,7 +34,7 @@ namespace Monty_Hall_Simulation_API.Services
                     ? _game.UserChoosesDoor(DoorState.Initial)
                     : _game.UserChoosesDoor(DoorState.Chosen);
 
-                if (chosenDoor.Prize == "Car")
+                if (chosenDoor.Prize == AppConstants.CAR)
                 {
                     winCount++;
                 }
