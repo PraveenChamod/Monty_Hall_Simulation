@@ -33,6 +33,7 @@ export class SimulationComponent {
           this.winRatePercentage = response.winRatePercentage;
         },
         error: (error) => {
+          this.isLoading = false;
           console.error('Error fetching simulation data', error);
         },
         complete: () => {
