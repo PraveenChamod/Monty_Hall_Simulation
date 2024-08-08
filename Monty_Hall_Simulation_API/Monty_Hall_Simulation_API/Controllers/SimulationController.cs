@@ -4,8 +4,9 @@ using Monty_Hall_Simulation_API.Models;
 
 namespace Monty_Hall_Simulation_API.Controllers
 {
-    [Route("api/[controller]")]
+    
     [ApiController]
+    [Route("api/[controller]")]
     public class SimulationController : ControllerBase
     {
         private readonly ISimulation _simulationService;
@@ -15,7 +16,8 @@ namespace Monty_Hall_Simulation_API.Controllers
             _simulationService = simulationService;
         }
 
-        [HttpPost("Start")]
+        [HttpPost]
+        [Route("Start")]
         public IActionResult StartSimulations([FromQuery] int simulationCount, [FromQuery] bool switchStatus)
         {
             try
