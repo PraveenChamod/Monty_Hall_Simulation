@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SimulationComponent } from './components/simulation/simulation.component';
+import { UI_TEXTS } from './constants/uiTexts';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,5 @@ import { SimulationComponent } from './components/simulation/simulation.componen
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'Monty_Hall_Simulation_Frontend';
+  title = UI_TEXTS.APPLICATION_TITLE;
 }
