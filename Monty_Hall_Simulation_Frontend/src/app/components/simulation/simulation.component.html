@@ -1,0 +1,32 @@
+<div class="form-container">
+  <div class="form-inner-container">
+    <div class="form-group">
+      <p for="simulationCount">Enter the number of simulations</p>
+      <input
+        type="number"
+        class="form-control"
+        id="simulationCount"
+        name="simulationCount"
+        min="0"
+        [(ngModel)]="simulationCount"
+      />
+    </div>
+    <div class="form-group">
+      <p for="switchStatus">Do you want to switch the door?</p>
+      <label class="switch">
+        <input type="checkbox" id="switchStatus" [(ngModel)]="switchStatus" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+  <button class="form-submit" type="submit" (click)="onStart()">
+    Start Simulation
+  </button>
+  <div class="spinner" [ngClass]="{ 'spinner-hidden': !isLoading }"></div>
+  <p class="display-result" *ngIf="!isLoading">
+    You Have Wins {{ winCount }} Out Of {{ gameCount }} Simulations.
+  </p>
+  <p class="display-result" *ngIf="!isLoading">
+    Win Rate {{ winRate }} or {{ winRatePercentage }}%.
+  </p>
+</div>
