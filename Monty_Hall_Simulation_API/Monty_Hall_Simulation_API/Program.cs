@@ -7,6 +7,13 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddCors(options => options.AddPolicy("Policy", 
+    policy =>
+    {
+        policy.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+    } 
+    ));
+
 builder.Services.AddSingleton<Random>();
 builder.Services.AddTransient<IGame, Game>();
 builder.Services.AddTransient<ISimulation, Simulation>();
@@ -18,6 +25,8 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.UseCors("Policy");
 
 app.UseHttpsRedirection();
 
