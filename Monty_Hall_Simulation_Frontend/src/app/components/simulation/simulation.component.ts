@@ -17,7 +17,7 @@ export class SimulationComponent {
   gameCount = 0;
   winCount = 0;
   winRate = 0.0;
-  winRatePercentage = 0;
+  winRatePercentage = 0.00;
   isLoading = false;
 
   constructor(private simulationService: SimulationService) {}

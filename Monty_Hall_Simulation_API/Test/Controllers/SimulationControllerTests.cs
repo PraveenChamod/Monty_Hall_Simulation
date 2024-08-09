@@ -30,7 +30,7 @@ namespace Test.Controllers
                 GameCount = 1000,
                 WinCount = 700,
                 WinRate = 0.7,
-                WinRatePercentage = 70
+                WinRatePercentage = 70.00
             };
             _mockSimulationService.Setup(service => service.StartSimulations(simulationCount, switchStatus))
                                   .Returns(resultMock);

@@ -37,7 +37,7 @@ describe('SimulationComponent', () => {
       gameCount: 10,
       winCount: 5,
       winRate: 0.5,
-      winRatePercentage: 50
+      winRatePercentage: 50.00
     };
 
     component.simulationCount = simulationCount;
@@ -60,7 +60,7 @@ describe('SimulationComponent', () => {
       gameCount: 10,
       winCount: 5,
       winRate: 0.5,
-      winRatePercentage: 50
+      winRatePercentage: 50.00
     };
 
     simulationService.startSimulation.and.returnValue(of(mockResponse));

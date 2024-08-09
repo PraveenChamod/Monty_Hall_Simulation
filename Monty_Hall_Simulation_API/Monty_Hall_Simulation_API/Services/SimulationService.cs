@@ -44,7 +44,7 @@ namespace Monty_Hall_Simulation_API.Services
 
             double winRate = (double)winCount / simulationCount;
 
-            int winRatePercentage = (int)(winRate * 100);
+            double winRatePercentage = Math.Round(winRate * 100, 2);
 
             Result result = new()
             {

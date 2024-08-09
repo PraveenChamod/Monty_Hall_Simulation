@@ -37,7 +37,7 @@ describe('SimulationService', () => {
     const req = httpMock.expectOne(
       `${environment.API_URL}?simulationCount=${simulationCount}&switchStatus=${switchStatus}`
     );
-    expect(req.request.method).toBe('POST');
+    expect(req.request.method).toBe('GET');
     req.flush(mockResponse);
   });
 });

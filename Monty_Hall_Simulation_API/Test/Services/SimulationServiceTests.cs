@@ -45,7 +45,7 @@ namespace Test.Services
             Assert.AreEqual(simulationCount, result.GameCount);
             Assert.AreEqual(1, result.WinCount);
             Assert.AreEqual(1.0, result.WinRate);
-            Assert.AreEqual(100, result.WinRatePercentage);
+            Assert.AreEqual(100.00, result.WinRatePercentage);
         }
     }
 }
