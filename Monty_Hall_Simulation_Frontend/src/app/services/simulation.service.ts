@@ -16,6 +16,6 @@ export class SimulationService {
     switchStatus: boolean
   ): Observable<any> {
     const url = `${this.apiUrl}?simulationCount=${simulationCount}&switchStatus=${switchStatus}`;
-    return this.http.post<any>(url, {});
+    return this.http.get<any>(url, {});
   }
 }

@@ -16,7 +16,7 @@ namespace Monty_Hall_Simulation_API.Controllers
             _simulationService = simulationService;
         }
 
-        [HttpPost]
+        [HttpGet]
         [Route("Start")]
         public IActionResult StartSimulations([FromQuery] int simulationCount, [FromQuery] bool switchStatus)
         {
