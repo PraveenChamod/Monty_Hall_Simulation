@@ -5,7 +5,7 @@ using Monty_Hall_Simulation_API.Models;
 
 namespace Monty_Hall_Simulation_API.Services
 {
-    public class Game : IGame
+    public class GameService : IGameService
     {
         private List<Door> _doors =
         [
@@ -14,7 +14,7 @@ namespace Monty_Hall_Simulation_API.Services
             new() { DoorState = DoorState.Initial, Prize = AppConstants.CAR }
         ];
 
-        public Door UserChoosesDoor(int doorIndex)
+        public Door UserChoosenDoor(int doorIndex)
         {
             if (doorIndex < 0 || doorIndex > 2)
             {

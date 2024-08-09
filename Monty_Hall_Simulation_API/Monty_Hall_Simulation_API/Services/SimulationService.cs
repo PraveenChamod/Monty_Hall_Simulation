@@ -5,11 +5,11 @@ using Monty_Hall_Simulation_API.Models;
 
 namespace Monty_Hall_Simulation_API.Services
 {
-    public class Simulation : ISimulation
+    public class SimulationService : ISimulationService
     {
         private readonly Random _random;
-        private readonly IGame _game;
-        public Simulation(Random random, IGame game)
+        private readonly IGameService _game;
+        public SimulationService(Random random, IGameService game)
         {
             _random = random;
             _game = game;
@@ -27,7 +27,7 @@ namespace Monty_Hall_Simulation_API.Services
             {
                 var initialChoose = _random.Next(0, 3);
 
-                _game.UserChoosesDoor(initialChoose);
+                _game.UserChoosenDoor(initialChoose);
                 _game.SpeakerOpensDoor();
 
                 var chosenDoor = switchStatus

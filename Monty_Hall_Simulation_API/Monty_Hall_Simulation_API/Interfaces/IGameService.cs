@@ -3,9 +3,9 @@ using Monty_Hall_Simulation_API.Models;
 
 namespace Monty_Hall_Simulation_API.Interfaces
 {
-    public interface IGame
+    public interface IGameService
     {
-        Door UserChoosesDoor(int doorIndex);
+        Door UserChoosenDoor(int doorIndex);
 
         Door UserChoosesDoor(DoorState doorState);
 

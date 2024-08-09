@@ -15,8 +15,8 @@ builder.Services.AddCors(options => options.AddPolicy("Policy",
     ));
 
 builder.Services.AddSingleton<Random>();
-builder.Services.AddTransient<IGame, Game>();
-builder.Services.AddTransient<ISimulation, Simulation>();
+builder.Services.AddTransient<IGameService, GameService>();
+builder.Services.AddTransient<ISimulationService, SimulationService>();
 
 var app = builder.Build();
 

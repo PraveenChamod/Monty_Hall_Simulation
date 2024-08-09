@@ -9,9 +9,9 @@ namespace Monty_Hall_Simulation_API.Controllers
     [Route("api/[controller]")]
     public class SimulationController : ControllerBase
     {
-        private readonly ISimulation _simulationService;
+        private readonly ISimulationService _simulationService;
 
-        public SimulationController(ISimulation simulationService)
+        public SimulationController(ISimulationService simulationService)
         {
             _simulationService = simulationService;
         }

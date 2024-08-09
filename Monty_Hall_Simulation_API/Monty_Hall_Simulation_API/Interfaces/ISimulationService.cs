@@ -2,7 +2,7 @@
 
 namespace Monty_Hall_Simulation_API.Interfaces
 {
-    public interface ISimulation
+    public interface ISimulationService
     {
         Result StartSimulations(int simulationCount, bool switchStatus);
     }
